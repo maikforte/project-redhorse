@@ -1,0 +1,11 @@
+Multiply the passed params to itself
+---
+parameters:
+  - name: number
+    in: query
+    type: integer
+    required: true
+
+responses:
+  200:
+    description: Multiplies the number to itself
