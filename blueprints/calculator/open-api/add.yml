@@ -1,0 +1,25 @@
+Adds the augend and addend
+---
+parameters:
+  - name: augend
+    in: query
+    type: integer
+    required: true
+
+  - name: addend
+    in: query
+    type: integer
+    required: true
+
+responses:
+  200:
+    description: The sum of augend and addend
+    schema:
+      $ref: '#/definitions/AddResponse'
+
+definitions:
+  AddResponse:
+    type: object
+    properties:
+      sum:
+        type: integer

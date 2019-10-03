@@ -1,6 +1,16 @@
 from blueprints.calculator import controller
 
 
+def test_add():
+    augend = 3
+    addend = 3
+    sum = augend + addend
+
+    result = controller.add(augend, addend)
+
+    assert result == sum
+
+
 def test_multiply():
     multiplicand = 2
     multiplier = 3

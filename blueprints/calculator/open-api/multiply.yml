@@ -1,11 +1,29 @@
-Multiply the passed params to itself
+Multiplies the multiplicand and multiplier
 ---
 parameters:
-  - name: number
-    in: query
-    type: integer
+  - in: body
+    name: body
     required: true
+    schema:
+      $ref: '#/definitions/MultiplyBody'
 
 responses:
   200:
-    description: Multiplies the number to itself
+    description: The product of multiplicand and multiplier
+    schema:
+      $ref: '#/definitions/MultiplyResponse'
+
+definitions:
+  MultiplyResponse:
+    type: object
+    properties:
+      product:
+        type: integer
+
+  MultiplyBody:
+    type: object
+    properties:
+      multiplicand:
+        type: integer
+      multiplier:
+        type: integer
