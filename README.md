@@ -21,7 +21,7 @@ It's called RedHorse because the project is Flask... He he he.
 1. Open your browser to `http://localhost:5000/apidocs`
 
 ## Documentation
-(Flasgger)[https://github.com/flasgger/flasgger] is the choice of OpenAPI specs extractor for Project RedHorse.
+[Flasgger](https://github.com/flasgger/flasgger) is the choice of OpenAPI specs extractor for Project RedHorse.
 
 OpenAPI yaml specs are defined in `<blueprint>/open-api/`.
 
