@@ -3,6 +3,7 @@
 # Table of Contents
 1. [What the?](#what-the)
 1. [Quickstart](#quickstart)
+1. [Documentation](#documentation)
 1. [Pre-Commit](#pre-commit)
 1. [Testing](#testing)
 1. [Linting](#linting)
@@ -18,6 +19,13 @@ It's called RedHorse because the project is Flask... He he he.
 1. Navigate to the project folder
 1. Run `flask run`
 1. Open your browser to `http://localhost:5000/apidocs`
+
+## Documentation
+(Flasgger)[https://github.com/flasgger/flasgger] is the choice of OpenAPI specs extractor for Project RedHorse.
+
+OpenAPI yaml specs are defined in `<blueprint>/open-api/`.
+
+To access the documentation, open your browser and go to `http://localhost:5000/apidocs` after running the application.
 
 ## Pre-Commit
 The project uses [Pre-Commit](https://pre-commit.com/) package to configure the pre-commit hook. Right now, it is configured to run [Flake8](#linting) along with [Black Formatter](#file-formatter).
