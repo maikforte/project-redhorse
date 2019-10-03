@@ -14,7 +14,7 @@ def create_app():
     app.register_blueprint(calculator, url_prefix="/calculator")
 
     Swagger(app, template=get_swagger_template())
-
+    print("test")
     return app
 
 
