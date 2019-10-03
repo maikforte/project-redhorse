@@ -47,7 +47,7 @@ See `.flake8` file.
 
 Running Flake8:
 1. Navigate to project folder
-1. Run `flake8 <file_regex>
+1. Run `flake8 <file_regex>`
 
 ## File Formatter
 The project uses [Black](https://github.com/psf/black) to format the Python scripts
