@@ -1,4 +1,4 @@
-Subtracts the subtrahend to minuend
+Subtracts the subtrahend from minuend
 ---
 parameters:
   - in: body

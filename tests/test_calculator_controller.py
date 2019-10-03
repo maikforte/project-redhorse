@@ -29,3 +29,13 @@ def test_multiply():
     result = controller.multiply(multiplicand, multiplier)
 
     assert result == product
+
+
+def test_divide():
+    dividend = 4
+    divisor = 2
+    quotient = dividend / divisor
+
+    result = controller.divide(dividend, divisor)
+
+    assert result == quotient

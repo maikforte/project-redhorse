@@ -44,3 +44,16 @@ def test_multiply():
 
     assert response.status_code == 200
     assert response_data["product"] == product
+
+
+def test_divide():
+    request_body = {"dividend": 4, "divisor": 2}
+
+    quotient = request_body["dividend"] / request_body["divisor"]
+
+    response = client.delete("{}/divide".format(ENDPOINT), data=json.dumps(request_body))
+
+    response_data = json.loads(response.data)
+
+    assert response.status_code == 200
+    assert response_data["quotient"] == quotient

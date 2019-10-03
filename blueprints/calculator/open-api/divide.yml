@@ -1,0 +1,29 @@
+Divides the divisor from dividend
+---
+parameters:
+  - in: body
+    name: body
+    required: true
+    schema:
+      $ref: '#/definitions/DivideBody'
+
+responses:
+  200:
+    description: The quotiend of divisor and dividend
+    schema:
+      $ref: '#/definitions/DivideResponse'
+
+definitions:
+  DivideResponse:
+    type: object
+    properties:
+      quotient:
+        type: integer
+
+  DivideBody:
+    type: object
+    properties:
+      dividend:
+        type: integer
+      divisor:
+        type: integer

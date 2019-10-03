@@ -40,3 +40,16 @@ def multiply():
     product = controller.multiply(multiplicand, multiplier)
 
     return jsonify({"product": product}), 200
+
+
+@calculator.route("/divide", methods=["DELETE"])
+@swag_from("open-api/divide.yml")
+def delete():
+    data = json.loads(request.data)
+
+    dividend = data["dividend"]
+    divisor = data["divisor"]
+
+    quotient = controller.divide(dividend, divisor)
+
+    return jsonify({"quotient": quotient}), 200
