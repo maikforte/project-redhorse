@@ -1,4 +1,3 @@
-import os
 from flask import Flask
 from flasgger import Swagger
 from dotenv import load_dotenv
