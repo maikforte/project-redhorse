@@ -1,7 +1,11 @@
 from blueprints.calculator import controller
 
-def test_multiply():
-    number = 2
-    result = controller.multiply(number)
 
-    assert (result == (number * number))
+def test_multiply():
+    multiplicand = 2
+    multiplier = 3
+    product = multiplicand * multiplier
+
+    result = controller.multiply(multiplicand, multiplier)
+
+    assert result == product

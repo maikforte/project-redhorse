@@ -1,4 +1,4 @@
-from flask import request
+from flask import request, jsonify
 from flasgger import swag_from
 
 from blueprints.calculator import calculator, controller
@@ -7,6 +7,9 @@ from blueprints.calculator import calculator, controller
 @calculator.route('/multiply')
 @swag_from('open-api/multiply.yml')
 def multiply():
-    number = request.args.get('number')
-    response = controller.multiply(number)
-    return str(response)
+    multiplicand = int(request.args.get('multiplicand'))
+    multiplier = int(request.args.get('multiplier'))
+
+    product = controller.multiply(multiplicand, multiplier)
+
+    return jsonify({ "product": product })
