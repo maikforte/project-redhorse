@@ -25,7 +25,9 @@ def test_subtract():
 
     difference = request_body["minuend"] - request_body["subtrahend"]
 
-    response = client.post("{}/subtract".format(ENDPOINT), data=json.dumps(request_body))
+    response = client.post(
+        "{}/subtract".format(ENDPOINT), data=json.dumps(request_body)
+    )
 
     response_data = json.loads(response.data)
 
@@ -51,7 +53,9 @@ def test_divide():
 
     quotient = request_body["dividend"] / request_body["divisor"]
 
-    response = client.delete("{}/divide".format(ENDPOINT), data=json.dumps(request_body))
+    response = client.delete(
+        "{}/divide".format(ENDPOINT), data=json.dumps(request_body)
+    )
 
     response_data = json.loads(response.data)
 

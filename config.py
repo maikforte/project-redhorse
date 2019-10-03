@@ -14,6 +14,21 @@ def create_app():
 
     app.register_blueprint(calculator, url_prefix="/calculator")
 
-    Swagger(app)
+    Swagger(app, template=get_swagger_template())
 
     return app
+
+
+def get_swagger_template():
+    return {
+        "info": {
+            "title": "Project RedHorse",
+            "description": "Quick demonstration of Flask for Knowledge Tree",
+            "contact": {
+                "responsibleDeveloper": "Michael 'Maik' Ardan",
+                "email": "michael.ardan2000@gmail.com",
+            },
+            "version": "1.0.0",
+        },
+        "schemes": ["http"],
+    }
