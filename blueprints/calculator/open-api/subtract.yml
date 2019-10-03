@@ -1,0 +1,29 @@
+Subtracts the subtrahend to minuend
+---
+parameters:
+  - in: body
+    name: body
+    required: true
+    schema:
+      $ref: '#/definitions/SubtractBody'
+
+responses:
+  200:
+    description: The difference of minuend and subtrahend
+    schema:
+      $ref: '#/definitions/SubtractResponse'
+
+definitions:
+  SubtractResponse:
+    type: object
+    properties:
+      difference:
+        type: integer
+
+  SubtractBody:
+    type: object
+    properties:
+      minuend:
+        type: integer
+      subtrahend:
+        type: integer

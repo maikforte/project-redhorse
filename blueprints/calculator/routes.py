@@ -16,6 +16,19 @@ def add():
     return jsonify({"sum": sum}), 200
 
 
+@calculator.route("/subtract", methods=["POST"])
+@swag_from("open-api/subtract.yml")
+def subtract():
+    data = json.loads(request.data)
+
+    minuend = data["minuend"]
+    subtrahend = data["subtrahend"]
+
+    difference = controller.subtract(minuend, subtrahend)
+
+    return jsonify({"difference": difference}), 200
+
+
 @calculator.route("/multiply", methods=["PUT"])
 @swag_from("open-api/multiply.yml")
 def multiply():

@@ -11,6 +11,16 @@ def test_add():
     assert result == sum
 
 
+def test_subtract():
+    minuend = 3
+    subtrahend = 3
+    difference = minuend - subtrahend
+
+    result = controller.subtract(minuend, subtrahend)
+
+    assert result == difference
+
+
 def test_multiply():
     multiplicand = 2
     multiplier = 3

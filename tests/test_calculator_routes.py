@@ -20,6 +20,19 @@ def test_add():
     assert response_data["sum"] == sum
 
 
+def test_subtract():
+    request_body = {"minuend": 2, "subtrahend": 3}
+
+    difference = request_body["minuend"] - request_body["subtrahend"]
+
+    response = client.post("{}/subtract".format(ENDPOINT), data=json.dumps(request_body))
+
+    response_data = json.loads(response.data)
+
+    assert response.status_code == 200
+    assert response_data["difference"] == difference
+
+
 def test_multiply():
     request_body = {"multiplicand": 2, "multiplier": 3}
 
