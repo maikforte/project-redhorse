@@ -1,10 +1,9 @@
 import os
-
+from flask import Flask
+from flasgger import Swagger
 from dotenv import load_dotenv
 
-from flask import Flask
 from blueprints import calculator
-from flasgger import Swagger
 
 load_dotenv('.env')
 
