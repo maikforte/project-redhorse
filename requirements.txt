@@ -1,4 +1,4 @@
-Flask==1.1.1
+Flask==2.3.2
 python-dotenv==0.10.3
 flasgger==0.9.3
 black==19.3b0
